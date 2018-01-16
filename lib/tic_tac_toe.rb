@@ -122,5 +122,13 @@ class TicTacToe
       return false
     end
   end
+  
+  def winner(board)
+    if draw?(board) || over?(board) == false
+      return nil
+    else
+      return board[won?(board)[0]]
+    end
+  end
 
 end
