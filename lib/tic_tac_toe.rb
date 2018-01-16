@@ -93,5 +93,20 @@ class TicTacToe
         }
     end
   end
+  
+  def full?
+    i = 0
+    while i < @board.length 
+      if position_taken?(i) == false
+        return false
+        break
+      else
+        i += 1
+      end
+    end
+    return true
+  end
+  
+  
 
 end
