@@ -32,10 +32,10 @@ class TicTacToe
     return @board
   end
   
-  def position_taken?(board,index)
-    if board.length == 0
+  def position_taken?(index)
+    if @board.length == 0
       return
-    elsif (board[index] == " ") || (board[index] == "") || (board[index] == nil)
+    elsif (@board[index] == " ") || (@board[index] == "") || (@board[index] == nil)
       return false
     else
       return true
