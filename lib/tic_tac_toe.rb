@@ -65,5 +65,17 @@ class TicTacToe
       return turn
     end
   end
+  
+  def turn_count
+    counter = 0
+    @board.each{|loc| 
+      if (loc == "X") || (loc == "O")
+        counter +=1
+      end
+    }
+    return counter
+  end
+  
+  
 
 end
