@@ -80,13 +80,13 @@ class TicTacToe
     turn_count % 2 == 0 ? "X" : "O"
   end
   
-  def won?(board)
-    if board == [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+  def won?
+    if @board == [" ", " ", " ", " ", " ", " ", " ", " ", " "]
       return false
     else
       WIN_COMBINATIONS.any?{|combo|
-        if position_taken?(board, combo[0])
-          if board[combo[0]] == board[combo[1]] && board[combo[0]] == board[combo[2]]
+        if position_taken?(combo[0])
+          if @board[combo[0]] == @board[combo[1]] && @board[combo[0]] == @board[combo[2]]
             return combo
           end
         end
