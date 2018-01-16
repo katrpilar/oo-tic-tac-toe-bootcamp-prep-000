@@ -59,7 +59,7 @@ class TicTacToe
     input = gets.strip
     realindex = input_to_index(input)
     if valid_move?(realindex)
-      move(realindex,current_player(board)) #current player board?????
+      move(realindex,current_player)
       display_board
     else
       return turn
@@ -76,6 +76,8 @@ class TicTacToe
     return counter
   end
   
-  
+  def current_player
+    turn_count % 2 == 0 ? "X" : "O"
+  end
 
 end
