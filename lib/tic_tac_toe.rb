@@ -127,8 +127,10 @@ class TicTacToe
     if draw? || over? == false
       return nil
     else
-      return @board[won?(board)[0]]
+      return @board[won?[0]]
     end
   end
+  
+  
 
 end
